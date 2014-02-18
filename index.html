@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="base.css"/>
+</head>
+<body>
+
+<div class="container"  data-bind="scroller: currentPosition">
+    <div class="area">
+
+        <!--ko foreach: data-->
+        <div class="item" data-bind="style: {top: x +'px', left: y +'px', background: color, width: size + 'px', height: size + 'px'}"></div>
+        <!--/ko-->
+
+        <!--ko foreach: time-->
+        <p data-bind="text: $data, style: {left: $data + 'px'}" class="time"></p>
+        <!--/ko-->
+    </div>
+    <div class="dude" data-bind="style: {background: activityColor}"></div>
+</div>
+
+<script type="text/javascript" src="knockout.js"></script>
+<script type="text/javascript" src="extensions.js"></script>
+<script type="text/javascript" src="viewmodel.js"></script>
+</body>
+</html>
